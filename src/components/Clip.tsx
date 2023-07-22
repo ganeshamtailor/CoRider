@@ -1,62 +1,32 @@
-import { FC } from 'react'
-import { Paperclip } from "lucide-react";
-import { Input } from "@/components/ui/input"
-
+import { FC } from "react";
+import { Paperclip, Camera, Video, FileDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
-interface AttachProps {
-  
-}
+} from "@/components/ui/popover";
+interface AttachProps {}
 
 const Clip: FC<AttachProps> = ({}) => {
-  return <Popover>
-  <PopoverTrigger asChild>
-  <Paperclip />
-  </PopoverTrigger>
-  <PopoverContent className="w-80">
-    <div className="grid gap-4">
-      <div className="space-y-2">
-        <h4 className="font-medium leading-none">Dimensions</h4>
-        <p className="text-sm text-muted-foreground">
-          Set the dimensions for the layer.
-        </p>
-      </div>
-      <div className="grid gap-2">
-        <div className="grid grid-cols-3 items-center gap-4">
-          <Input
-            id="width"
-            defaultValue="100%"
-            className="col-span-2 h-8"
-          />
-        </div>
-        <div className="grid grid-cols-3 items-center gap-4">
-          <Input
-            id="maxWidth"
-            defaultValue="300px"
-            className="col-span-2 h-8"
-          />
-        </div>
-        <div className="grid grid-cols-3 items-center gap-4">
-          <Input
-            id="height"
-            defaultValue="25px"
-            className="col-span-2 h-8"
-          />
-        </div>
-        <div className="grid grid-cols-3 items-center gap-4">
-          <Input
-            id="maxHeight"
-            defaultValue="none"
-            className="col-span-2 h-8"
-          />
-        </div>
-      </div>
-    </div>
-  </PopoverContent>
-</Popover>
-}
+  return (
+    <Popover>
+      <PopoverTrigger asChild>
+        <Paperclip />
+      </PopoverTrigger>
+      <PopoverContent className="flex bg-[#008000] p-2 rounded-full w-45 justify-between mb-2">
+        <Button variant="ghost">
+          <Camera className="text-white w-6 h-6" />
+        </Button>
+        <Button variant="ghost">
+        <Video className="text-white w-6 h-6" />
+        </Button>
+        <Button variant="ghost">
+        <FileDown className="text-white w-6 h-6" />
+        </Button>
+      </PopoverContent>
+    </Popover>
+  );
+};
 
-export default Clip
+export default Clip;
