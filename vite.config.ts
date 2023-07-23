@@ -7,6 +7,25 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
+      devOptions: {
+        enabled: true
+      },
+      manifest: {
+        name: 'corider',
+        short_name: 'corider',
+        start_url: '/',
+        display: 'standalone',
+        background_color: '#ffffff',
+        theme_color: '#007bff',
+        icons: [
+          {
+            src: 'CoRider.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+
+        ],
+      },
       workbox: {
         globPatterns: ["**/*"],
       },
