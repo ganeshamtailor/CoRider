@@ -8,6 +8,7 @@ interface FooterProps {}
 
 const Footer: FC<FooterProps> = ({}) => {
   return (
+    <div className="Footer">
     <div className="p-4 mb-4 relative">
       <Input type="text" placeholder="Reply" />
 
@@ -22,6 +23,7 @@ const Footer: FC<FooterProps> = ({}) => {
       >
         <SendHorizonal />
       </Button>
+    </div>
     </div>
   );
 };

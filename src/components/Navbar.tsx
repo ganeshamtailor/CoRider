@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import Menu from "./Menu";
 
 
-const Header: FC = () => {
+const Navbar: FC = () => {
   return (
-    <>
+    <div className="Header">
       <div className="flex gap-2 items-center p-4 ">
         <Button variant="ghost">
           <ArrowLeft className="h-8 w-8 sm:h-6 sm:w-6 text-zinc-700" />
@@ -40,8 +40,8 @@ const Header: FC = () => {
         <Menu />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default Header;
+export default Navbar;

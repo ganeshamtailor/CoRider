@@ -17,7 +17,7 @@ const Menu: FC<MenuProps> = ({}) => {
       <DropdownMenuTrigger>
         <MoreVertical />
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="bg-white " align="end">
+      <DropdownMenuContent className="DropdownMenuContent bg-white " align="end">
         <DropdownMenuGroup>
           <DropdownMenuItem>
             <Users2 className="mr-2 h-5 w-5" />

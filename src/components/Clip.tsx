@@ -14,14 +14,14 @@ const Clip: FC<AttachProps> = ({}) => {
       <PopoverTrigger asChild>
         <Paperclip />
       </PopoverTrigger>
-      <PopoverContent className="flex bg-[#008000] p-2 rounded-full w-45 justify-between mb-2">
-        <Button variant="ghost">
+      <PopoverContent className="flex bg-[#008000] p-2 rounded-full w-45 justify-between mb-6 border-0">
+        <Button variant="link">
           <Camera className="text-white w-6 h-6" />
         </Button>
-        <Button variant="ghost">
+        <Button variant="link">
         <Video className="text-white w-6 h-6" />
         </Button>
-        <Button variant="ghost">
+        <Button variant="link">
         <FileDown className="text-white w-6 h-6" />
         </Button>
       </PopoverContent>
