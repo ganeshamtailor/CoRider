@@ -10,7 +10,7 @@ const Message: FC<MessageProps> = ({ msg }) => {
   const profilePic = msg.sender.image;
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
+    ref.current?.scrollIntoView({ behavior: "auto" });
   }, [msg]);
   
 
