@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect, useRef } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 interface MessageProps {
   msg: any;
@@ -8,8 +8,14 @@ const Message: FC<MessageProps> = ({ msg }) => {
   const selfSend = msg.sender.self;
   const msgText = msg.message;
   const profilePic = msg.sender.image;
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  }, [msg]);
+  
+
   return (
-    <>
+    <div ref={ref}>
       {!selfSend ? (
         <div className="flex items-start">
           <div>
@@ -31,7 +37,7 @@ const Message: FC<MessageProps> = ({ msg }) => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
